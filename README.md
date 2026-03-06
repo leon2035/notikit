@@ -11,6 +11,7 @@
 - 多渠道支持：Bark / Telegram / 钉钉 / 飞书
 - 支持 Provider 个性化参数
 - 部分渠道失败不影响其他渠道
+- CLI 支持，可通过 `uvx notikit` 直接发送
 - 仅依赖 httpx，无其他第三方依赖
 - Python 3.10+
 
@@ -57,6 +58,28 @@ notify("部署完成，服务已上线")
 ```
 
 就这么简单。
+
+### 3. 命令行使用
+
+```bash
+# 直接运行（无需安装）
+uvx notikit "部署完成"
+
+# 指定渠道
+uvx notikit "告警消息" -c lark,bark
+
+# 指定配置文件
+uvx notikit "消息" --config /path/to/notikit.toml
+
+# 查看版本
+uvx notikit -v
+```
+
+如果已安装 notikit，也可以直接使用：
+
+```bash
+notikit "部署完成"
+```
 
 ## 使用方式
 

@@ -7,6 +7,7 @@
 ```
 src/notikit/
 ├── __init__.py          # 公共 API: notify, anotify, Notikit
+├── cli.py               # 命令行接口
 ├── core.py              # Notikit 核心类
 ├── config.py            # 配置加载（toml 解析、自动发现）
 ├── exceptions.py        # 异常体系
